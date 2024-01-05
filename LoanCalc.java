@@ -18,8 +18,15 @@ public class LoanCalc {
 		int n = Integer.parseInt(args[2]);
 		System.out.println("Loan sum = " + loan + ", interest rate = " + rate + "%, periods = " + n);
 		
-		// Computes the periodical payment using brute force search
-		System.out.print("Periodical payment, using brute force: ");
+		double g = loan/n;
+		double increment = 0.0001;
+		double TheLoan = loan*(Math.pow((1+(rate/100)), n));
+		while (((TheLoan - (g*(n+1))) >= 0)) {
+			g+= epsilon;
+			iterationCounter++;
+		}
+
+		System.out.print("Periodical payment, using brute force: " + g);
 		System.out.printf("%.2f", bruteForceSolver(loan, rate, n, epsilon));
 		System.out.println();
 		System.out.println("number of iterations: " + iterationCounter);

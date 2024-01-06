@@ -3,6 +3,20 @@ public class LowerCase {
     public static void main(String[] args) {  
         String str = args[0];
         System.out.println(lowerCase(str));
+        String theFinal = "";
+        int len = str.length()  ;
+        for (int i=0 ;i < len ;i++) {
+            char currentChar = str.charAt(i);
+            if ((currentChar > 64) && (currentChar < 91)) {
+                currentChar+= 32;
+                theFinal += currentChar;
+            } else if (currentChar == ' ') {
+                theFinal += ' ';
+            }
+            else theFinal += currentChar;       
+            
+        }
+          System.out.println(theFinal);
     }
 
    /**

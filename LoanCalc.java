@@ -21,6 +21,7 @@ public class LoanCalc {
 		double g = loan/n;
 		double increment = 0.0001;
 		double TheLoan = loan*(Math.pow((1+(rate/100)), n));
+		System.out.println(TheLoan);
 		while (((TheLoan - (g*(n+1))) >= 0)) {
 			g+= epsilon;
 			iterationCounter++;

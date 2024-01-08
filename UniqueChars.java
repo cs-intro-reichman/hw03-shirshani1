@@ -3,7 +3,10 @@ public class UniqueChars {
     public static void main(String[] args) {  
         String str = args[0];
         System.out.println(uniqueChars(str));
+
+
     }
+
 
     /**
      * Returns a string which is identical to the original string, 
@@ -11,7 +14,16 @@ public class UniqueChars {
      * unless they are space characters.
      */
     public static String uniqueChars(String s) {
-        // Replace the following statement with your code
-        return null;
+        String theFinal = "";
+        int len = s.length()  ;
+        for (int i=0 ;i < len ;i++) {
+            char currentChar = s.charAt(i);
+            if (theFinal.indexOf(currentChar, 0) == -1) {
+                theFinal +=currentChar;
+                
+            }     
+        }
+
+        return theFinal;
     }
 }

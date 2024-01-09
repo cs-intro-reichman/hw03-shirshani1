@@ -21,7 +21,10 @@ public class UniqueChars {
             if (theFinal.indexOf(currentChar, 0) == -1) {
                 theFinal +=currentChar;
                 
-            }     
+            }else {
+                theFinal += " "; 
+                
+            }    
         }
 
         return theFinal;

@@ -18,7 +18,7 @@ public class LoanCalc {
 		int n = Integer.parseInt(args[2]);
 		System.out.println("Loan sum = " + loan + ", interest rate = " + rate + "%, periods = " + n);
 		System.out.print("Periodical payment, using brute force: " + bruteForceSolver(loan, rate, n, epsilon));
-		System.out.println("%.2f", bruteForceSolver(loan, rate, n, epsilon));
+		System.out.printf("%.2f", bruteForceSolver(loan, rate, n, epsilon));
 		System.out.println();
 		System.out.println("number of iterations: " + iterationCounter);
 
@@ -62,10 +62,10 @@ public class LoanCalc {
 			}else{
 			H = g;
 			}
-			iterationCounter++;
+			
 			g = (L + H) / 2.0;
-
 			}
+			iterationCounter++;
     	return g;
     }
 	

@@ -22,7 +22,7 @@ public class UniqueChars {
                 theFinal +=currentChar;
                 
             }else {
-                theFinal += " ";  
+                theFinal += ' ';  
                 
             }    
         }

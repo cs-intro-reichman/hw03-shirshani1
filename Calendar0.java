@@ -7,19 +7,24 @@ public class Calendar0 {
 	// Gets a year (command-line argument), and tests the functions isLeapYear and nDaysInMonth.
 	public static void main(String args[]) {
 		int year = Integer.parseInt(args[0]);
+		int month = 0;
 		isLeapYearTest(year);
 		nDaysInMonthTest(year);
-	}
-		 
-	// Tests the isLeapYear function.
-	private static void isLeapYearTest(int year) {
 		String commonOrLeap = "common";
 		if (isLeapYear(year)) {
 			commonOrLeap = "leap";
 		}
 		System.out.println(year + " is a " + commonOrLeap + " year");  
+		for (int i=1 ;i <= 12 ; i++) {
+			System.out.println("Month "+  i + " has " +nDaysInMonth(i, year) + " days");
+		}
+	
 	}
-
+		 
+	// Tests the isLeapYear function.
+	private static void isLeapYearTest(int year) {
+		
+}
 	// Tests the nDaysInMonth function.
 	private static void nDaysInMonthTest(int year) {
 		// Replace this comment with your code
@@ -39,7 +44,7 @@ public class Calendar0 {
 	    return check;
 
 	}
-	} 
+	 
 
 		
 	 
@@ -47,13 +52,32 @@ public class Calendar0 {
 	// April, June, September, and November have 30 days each.
 	// February has 28 days in a common year, and 29 days in a leap year.
 	// All the other months have 31 days.
-	// public static int nDaysInMonth(int month, int year) {
-	// 	int theDay = 0;
-	// 	// switch (theDay) {
-	// 	// 	case 1: 
-	// 	// 		System.out.println("Month 1 has 31 days");
-    //     //         break;
-	// 	}
-	// 	return 0;
-// 	}
-// }
+	public static int nDaysInMonth(int month, int year) {
+		int theDay = 0;
+		switch (month) {
+			case 1: // January
+            case 3: // March
+            case 5: // May
+            case 7: // July
+            case 8: // August
+            case 10: // October
+            case 12: // December
+           		theDay = 31;
+        	break;
+        	case 4: // April
+            case 6: // June
+            case 9: // September
+            case 11: // November
+            	theDay = 30;
+            break;
+        	case 2: //February
+        		if (isLeapYear(year) == true) {
+        			theDay = 29;
+        		}else {
+        			theDay = 28;
+        		}
+		}
+		return theDay;
+	}
+}
+

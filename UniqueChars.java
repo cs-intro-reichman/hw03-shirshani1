@@ -18,13 +18,10 @@ public class UniqueChars {
         int len = s.length()  ;
         for (int i=0 ;i < len ;i++) {
             char currentChar = s.charAt(i);
-            if (theFinal.indexOf(currentChar, 0) == -1) {
+            if (theFinal.indexOf(currentChar, 0) == -1 || currentChar == ' ') {
                 theFinal +=currentChar;
                 
-            }else {
-                theFinal += ' ';  
-                
-            }    
+            }
         }
 
         return theFinal;

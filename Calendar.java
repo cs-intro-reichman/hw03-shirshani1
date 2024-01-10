@@ -16,7 +16,7 @@ public class Calendar {
 	public static void main(String args[]) {
 		int theYear = Integer.parseInt(args[0]);
 	 	int sumSundays = 0;
-	 	while (year < 2024) {
+	 	while (year <= 2024) {
 	 		if (year == theYear){
 	 		if (dayOfWeek == 1) {
 	 			System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");	

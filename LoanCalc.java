@@ -43,6 +43,8 @@ public class LoanCalc {
 			g+= epsilon;
 			iterationCounter++;
 		}  
+		int g1 = (int) (g * 100);
+		g = (double) g1 / 100;
 		return g;
     }
     

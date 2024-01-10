@@ -18,7 +18,7 @@ public class Calendar {
 	 	int sumSundays = 0;
 	 	while (year < 2024) {
 	 		if (year == theYear){
-	 		if (dayOfWeek == 1 && dayOfMonth == 1) {
+	 		if (dayOfWeek == 1) {
 	 			System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");	
 	 			sumSundays ++;
 	 		} else {
